@@ -1,9 +1,10 @@
-import { Link, NavLink } from "react-router";
-import { MENU_CONTENT } from "../../constants/menu-content";
+import { Link } from "react-router";
+import { MENU_CONTENT } from "../../constants/menu-content.js";
 import {
   StyledImg,
   StyledImgContainer,
   StyledMenuContainer,
+  StyledMenuContent,
   StyledMenuContentContainer,
 } from "./menu-styles";
 import { useState } from "react";
@@ -25,12 +26,12 @@ const Menu = () => {
 
       {showMenu && (
         <nav>
-          <StyledMenuContentContainer>
+          <StyledMenuContentContainer  $isOpen={showMenu}>
             {MENU_CONTENT.map(content => (
               <li key={content.id}>
-                <NavLink to={content.path} onClick={() => setShowMenu(false)}>
+                < StyledMenuContent to={content.path} onClick={() => setShowMenu(false)}>
                   {content.index} {content.name}
-                </NavLink>
+                </ StyledMenuContent>
               </li>
             ))}
           </StyledMenuContentContainer>
