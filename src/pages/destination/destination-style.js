@@ -1,15 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "../../styles/colors";
-import Tabs from "../../components/tabs/Tabs";
 
-const StyledBackGround = styled.picture`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-`;
 const StyledDestinationContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -18,6 +9,19 @@ const StyledDestinationContainer = styled.section`
   padding: 24px;
   color: aliceblue;
   text-align: center;
+  background-image: url(/assets/images/destination/background-destination-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: 768px) {
+    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+  }
+
+  @media screen and (min-width: 1020px) {
+    background-image: url(/assets/images/destination/background-destination-desktop.jpg);
+  }
 `;
 
 const StyledImg = styled.img`
@@ -39,20 +43,23 @@ const StyledText = styled.p`
 `;
 
 const Styledline = styled.div`
-margin: 24px;
-background-color: rgba(255, 255, 255, 0.25);
-height: 2px;
-width: 100%;
-`
+  margin: 24px;
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 2px;
+  width: 100%;
+`;
 
 const StyledInfoBox = styled.div`
-display: flex;
-flex-direction: column;
-gap: 12px;
-border: 1px solid pink
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
 
-
-`
-
-
-export { StyledBackGround, StyledDestinationContainer, StyledImg, StyledTitle, StyledText, StyledInfoBox, Styledline};
+export {
+  StyledDestinationContainer,
+  StyledImg,
+  StyledTitle,
+  StyledText,
+  StyledInfoBox,
+  Styledline,
+};

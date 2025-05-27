@@ -5,8 +5,8 @@ import { NavLink } from "react-router";
 const StyledMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${COLORS.primary};
-`
+  // background-color: ${COLORS.primary};
+`;
 
 const StyledImgContainer = styled.div`
   display: flex;
@@ -36,18 +36,18 @@ const StyledMenuContentContainer = styled.ul`
   //background: rgba(11, 13, 23, 0.15);
   backdrop-filter: blur(40px);
   overflow-x: clip;
-  transform: ${props => (props.$isOpen ? 'translateX(0)' : 'translateX(100%)')};
+  transform: ${props => (props.$isOpen ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.5s ease-in;
 `;
 
 const StyledMenuContent = styled(NavLink)`
   display: block;
-color: ${COLORS.secondary};
-font-size: 1rem;
-position: relative;
-width: 219px;
+  color: ${COLORS.secondary};
+  font-size: 1rem;
+  position: relative;
+  width: 219px;
 
-&:active::before  {
+  &:active::before {
     content: "";
     position: absolute;
     left: 100%;
@@ -55,10 +55,11 @@ width: 219px;
     height: 20px;
     background-color: ${COLORS.secondary};
   }
-`
+`;
 export {
   StyledMenuContainer,
   StyledImgContainer,
   StyledImg,
-  StyledMenuContentContainer, StyledMenuContent
+  StyledMenuContentContainer,
+  StyledMenuContent,
 };

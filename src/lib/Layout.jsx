@@ -1,7 +1,9 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import Menu from "../components/menu/Menu";
 
 const Layout = () => {
+  const location = useLocation();
+  console.log(location);
   return (
     <>
       <Menu />
