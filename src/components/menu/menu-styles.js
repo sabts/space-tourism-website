@@ -17,15 +17,17 @@ const StyledImgContainer = styled.div`
 const StyledImg = styled.img`
   width: 24px;
   height: 24px;
+  z-index: 2;
 `;
 
 const StyledMenuContentContainer = styled.ul`
-  position: absolute;
-  left: 121px;
+  position: fixed;
+  top: 15px;
+  right: 0;
   display: flex;
   width: 254px;
   height: 107%;
-  padding-top: 1rem;
+  padding-top: 7rem;
   padding-left: 32px;
   flex-direction: column;
   gap: 48px;
@@ -34,8 +36,9 @@ const StyledMenuContentContainer = styled.ul`
   z-index: 1;
   backdrop-filter: blur(40px);
   overflow-x: clip;
-  transform: ${props => (props.$isOpen ? "translateX(0)" : "translateX(100%)")};
-  transition: transform 0.5s ease-in;
+  transform: ${({ $isOpen }) =>
+    $isOpen ? "translateX(0)" : "translateX(100%)"};
+  transition: transform 1s ease-in;
 `;
 
 const StyledMenuContent = styled(NavLink)`
