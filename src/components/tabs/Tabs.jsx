@@ -1,15 +1,15 @@
-import { NavLink } from "react-router";
-import { StyledTab } from "./tab-styles";
+import { StyledDestinationTab, StyledTabContainer } from "./tab-styles";
 
 const Tabs = ({ tabs, activeTab, setActiveTab }) => {
   return (
-    <StyledTab>
+    <StyledTabContainer>
       {tabs.map((tab, index) => (
-        <li key={tab} onClick={() => setActiveTab(index)}>
-          <NavLink>{tab}</NavLink>
-        </li>
+        <StyledDestinationTab key={tab} onClick={() => setActiveTab(index)}
+        $isActive={activeTab === index}>
+        {tab}
+        </StyledDestinationTab>
       ))}
-    </StyledTab>
+    </StyledTabContainer>
   );
 };
 export default Tabs;

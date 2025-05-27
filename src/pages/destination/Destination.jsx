@@ -6,7 +6,12 @@ import {
   StyledDestinationContainer,
   StyledImg,
   StyledInfoBox,
+  StyledInfoBoxText,
+  StyledInfoBoxTitle,
   Styledline,
+  StyledStepContainer,
+  StyledStepNumber,
+  StyledStepText,
   StyledText,
   StyledTitle,
 } from "./destination-style";
@@ -20,7 +25,11 @@ const Destination = () => {
     <StyledDestinationContainer>
       {selectedDestination && (
         <>
-          <span>01 PICK YOUR DESTINATION</span>
+        <StyledStepContainer>
+        <StyledStepNumber>01</StyledStepNumber>
+          <StyledStepText>PICK YOUR DESTINATION</StyledStepText>
+          </StyledStepContainer>
+
           <StyledImg
             src={selectedDestination.img}
             alt={selectedDestination.name}
@@ -31,12 +40,12 @@ const Destination = () => {
           <Styledline></Styledline>
           <StyledInfoBox>
             <div>
-              <h6>AVG. DISTANCE</h6>
-              <p>{selectedDestination.distance}</p>
+              <StyledInfoBoxTitle>AVG. DISTANCE</StyledInfoBoxTitle>
+              <StyledInfoBoxText>{selectedDestination.distance}</StyledInfoBoxText>
             </div>
             <div>
-              <h6>EST. TRAVEL TIME</h6>
-              <p>Travel Time: {selectedDestination.travelTime}</p>
+              <StyledInfoBoxTitle>EST. TRAVEL TIME</StyledInfoBoxTitle>
+              <StyledInfoBoxText>{selectedDestination.travelTime}</StyledInfoBoxText>
             </div>
           </StyledInfoBox>
         </>

@@ -7,21 +7,33 @@ const StyledDestinationContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 24px;
-  color: aliceblue;
+  color: ${COLORS.tertiary};
   text-align: center;
-  background-image: url(/assets/images/destination/background-destination-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+`;
 
-  @media screen and (min-width: 768px) {
-    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
-  }
+const StyledStepContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  margin-bottom: 40px;
+`;
 
-  @media screen and (min-width: 1020px) {
-    background-image: url(/assets/images/destination/background-destination-desktop.jpg);
-  }
+const StyledStepNumber = styled.span`
+  font-family: "Barlow Condensed";
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  color: rgba(255, 255, 255, 0.25);
+`;
+
+const StyledStepText = styled.span`
+  font-family: "Barlow Condensed";
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2.4px;
+  color: ${COLORS.secondary};
 `;
 
 const StyledImg = styled.img`
@@ -31,12 +43,15 @@ const StyledImg = styled.img`
   height: 230px;
 `;
 
-const StyledTitle = styled.h3`
+const StyledTitle = styled.h2`
+  font-family: Bellefair;
   font-size: 3.5rem;
   color: ${COLORS.secondary};
   margin: 0;
 `;
+
 const StyledText = styled.p`
+  font-family: Barlow;
   font-size: 0.9375rem;
   color: ${COLORS.tertiary};
   line-height: 180%;
@@ -55,11 +70,34 @@ const StyledInfoBox = styled.div`
   gap: 12px;
 `;
 
+const StyledInfoBoxTitle = styled.h5`
+  text-align: center;
+  font-family: "Barlow Condensed";
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: ${COLORS.tertiary};
+  margin: 8px;
+`;
+
+const StyledInfoBoxText = styled.p`
+  text-align: center;
+  font-family: Bellefair;
+  font-size: 1.75rem;
+  color: ${COLORS.secondary};
+  margin: 0;
+`;
+
 export {
   StyledDestinationContainer,
+  StyledStepContainer,
+  StyledStepNumber,
+  StyledStepText,
   StyledImg,
   StyledTitle,
   StyledText,
   StyledInfoBox,
   Styledline,
+  StyledInfoBoxTitle,
+  StyledInfoBoxText,
 };

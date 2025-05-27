@@ -1,34 +1,13 @@
 import styled from "styled-components";
 import { COLORS } from "../../styles/colors";
 
-const StyledBackGround = styled.picture`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-`;
-
 const StyledHomeContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 24px;
-  background-image: url(/assets/images/home/background-home-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-
-  @media screen and (min-width: 768px) {
-    background-image: url(/assets/images/home/background-home-tablet.jpg);
-  }
-
-  @media screen and (min-width: 1020px) {
-    background-image: url(/assets/images/home/background-home-desktop.jpg);
-  }
+  min-height: 90vh;
 `;
 
 const StyledTextContainer = styled.div`
@@ -39,20 +18,38 @@ const StyledTextContainer = styled.div`
   color: ${COLORS.tertiary};
   line-height: 180%;
 `;
-const StyledText = styled.p`
-  font-size: 1rem;
-`;
 
 const StyledTitle = styled.h2`
   font-size: 5rem;
+  font-family: Bellefair;
   color: ${COLORS.secondary};
   line-height: normal;
   margin: 0;
 `;
+
+const StyledSubtitle = styled.h3`
+  font-family: "Barlow Condensed";
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 400;
+  color: ${COLORS.tertiary};
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+`;
+
+const StyledText = styled.p`
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: ${COLORS.tertiary};
+  line-height: 180%;
+`;
+
 const StyledButton = styled.button`
   display: flex;
   width: 144px;
   height: 144px;
+  font-family: Bellefair;
+  font-size: 1.125rem;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -63,9 +60,9 @@ const StyledButton = styled.button`
 
 export {
   StyledHomeContainer,
-  StyledBackGround,
   StyledTextContainer,
   StyledText,
   StyledTitle,
+  StyledSubtitle,
   StyledButton,
 };

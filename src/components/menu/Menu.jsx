@@ -3,9 +3,11 @@ import { MENU_CONTENT } from "../../constants/menu-content.js";
 import {
   StyledImg,
   StyledImgContainer,
+  StyledIndex,
   StyledMenuContainer,
   StyledMenuContent,
   StyledMenuContentContainer,
+  StyledMenuElement,
 } from "./menu-styles";
 import { useState } from "react";
 
@@ -39,7 +41,11 @@ const Menu = () => {
                   to={content.path}
                   onClick={() => setShowMenu(false)}
                 >
-                  {content.index} {content.name}
+                  <StyledMenuElement>
+                  <StyledIndex>{content.index}</StyledIndex>
+                  <span>{content.name}</span>
+                  </StyledMenuElement>
+
                 </StyledMenuContent>
               </li>
             ))}

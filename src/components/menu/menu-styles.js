@@ -5,7 +5,6 @@ import { NavLink } from "react-router";
 const StyledMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
-  // background-color: ${COLORS.primary};
 `;
 
 const StyledImgContainer = styled.div`
@@ -32,8 +31,7 @@ const StyledMenuContentContainer = styled.ul`
   gap: 48px;
   align-items: flex-start;
   text-transform: uppercase;
-  background: transparent;
-  //background: rgba(11, 13, 23, 0.15);
+  z-index: 1;
   backdrop-filter: blur(40px);
   overflow-x: clip;
   transform: ${props => (props.$isOpen ? "translateX(0)" : "translateX(100%)")};
@@ -42,6 +40,7 @@ const StyledMenuContentContainer = styled.ul`
 
 const StyledMenuContent = styled(NavLink)`
   display: block;
+  font-family: "Barlow Condensed";
   color: ${COLORS.secondary};
   font-size: 1rem;
   position: relative;
@@ -56,10 +55,30 @@ const StyledMenuContent = styled(NavLink)`
     background-color: ${COLORS.secondary};
   }
 `;
+
+const StyledMenuElement = styled.div`
+  display: flex;
+  gap: 12px;
+  letter-spacing: 2.7px;
+`;
+
+const StyledIndex = styled.span`
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+`;
+
+const StyledIndexName = styled.span`
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+`;
+
 export {
   StyledMenuContainer,
   StyledImgContainer,
   StyledImg,
   StyledMenuContentContainer,
   StyledMenuContent,
+  StyledMenuElement,
+  StyledIndex,
+  StyledIndexName,
 };

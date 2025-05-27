@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import {
   StyledButton,
   StyledHomeContainer,
+  StyledSubtitle,
   StyledText,
   StyledTextContainer,
   StyledTitle,
@@ -11,7 +12,7 @@ const Home = () => {
   return (
     <StyledHomeContainer>
       <StyledTextContainer>
-        <StyledText>SO, YOU WANT TO TRAVEL TO</StyledText>
+        <StyledSubtitle>SO, YOU WANT TO TRAVEL TO</StyledSubtitle>
         <StyledTitle>SPACE</StyledTitle>
         <StyledText>
           Let’s face it; if you want to go to space, you might as well genuinely

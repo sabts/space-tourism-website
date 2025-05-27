@@ -1,18 +1,18 @@
-import { StyledCrewTab, StyledTab } from "./tab-styles";
+import { StyledCrewTab, StyledTabContainer } from "./tab-styles";
 
 const TabsCrew = ({ tabs, activeTab, setActiveTab }) => {
   return (
-    <StyledTab>
+    <StyledTabContainer>
       {tabs.map((tab, index) => (
-        <li
+        <StyledCrewTab
           key={tab}
-          $isActive={activeTab === index}
           onClick={() => setActiveTab(index)}
+          $isActive={activeTab === index}
         >
           <StyledCrewTab />
-        </li>
+        </StyledCrewTab>
       ))}
-    </StyledTab>
+    </StyledTabContainer>
   );
 };
 export default TabsCrew;

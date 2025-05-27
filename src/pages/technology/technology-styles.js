@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS } from "../../styles/colors";
 
 const StyledtechnologyContainer = styled.section`
   display: flex;
@@ -6,19 +7,80 @@ const StyledtechnologyContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 24px;
-  background-image: url(/assets/images/home/background-home-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-
-  @media screen and (min-width: 768px) {
-    background-image: url(/assets/images/home/background-home-tablet.jpg);
-  }
-
-  @media screen and (min-width: 1020px) {
-    background-image: url(/assets/images/home/background-home-desktop.jpg);
-  }
+  min-height: 100vh;
 `;
 
-export { StyledtechnologyContainer };
+const StyledStepContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  margin-bottom: 64px;
+`;
+
+const StyledStepNumber = styled.span`
+  font-family: "Barlow Condensed";
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  color: rgba(255, 255, 255, 0.25);
+`;
+
+const StyledStepText = styled.span`
+  font-family: "Barlow Condensed";
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2.4px;
+  color: ${COLORS.tertiary};
+`;
+
+const StyledContentContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+`;
+
+const StyledTitle = styled.h2`
+  font-family: Bellefair;
+  font-size: 1.5rem;
+  color: ${COLORS.secondary};
+  margin: 0;
+  text-transform: uppercase;
+`;
+
+const StyledSubtitle = styled.h3`
+  font-family: Bellefair;
+  font-size: 1.125rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+`;
+
+const StyledText = styled.p`
+  text-align: center;
+  font-family: Barlow;
+  font-size: 0.9375rem;
+  color: ${COLORS.tertiary};
+  line-height: 180%;
+  margin-bottom: 24px;
+`;
+
+const StyledImg = styled.img`
+  min-width: 375px;
+  height: 258px;
+  margin-bottom: 32px;
+`;
+
+export {
+  StyledtechnologyContainer,
+  StyledStepContainer,
+  StyledStepNumber,
+  StyledStepText,
+  StyledContentContainer,
+  StyledTitle,
+  StyledSubtitle,
+  StyledText,
+  StyledImg,
+};

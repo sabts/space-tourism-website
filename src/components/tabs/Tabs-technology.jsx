@@ -1,18 +1,18 @@
-import { StyledCrewTab, StyledTab } from "./tab-styles";
+import { StyledTabContainer, StyledTechnologyTab } from "./tab-styles";
 
 const TabsTechnology = ({ tabs, activeTab, setActiveTab }) => {
   return (
-    <StyledTab>
+    <StyledTabContainer>
       {tabs.map((tab, index) => (
-        <li
+        <StyledTechnologyTab
           key={tab}
-          $isActive={activeTab === index}
           onClick={() => setActiveTab(index)}
+          $isActive={activeTab === index}
         >
-          <StyledCrewTab />
-        </li>
+          {index + 1}
+        </StyledTechnologyTab>
       ))}
-    </StyledTab>
+    </StyledTabContainer>
   );
 };
 export default TabsTechnology;
