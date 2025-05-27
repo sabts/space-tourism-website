@@ -32,7 +32,8 @@ const StyledMenuContentContainer = styled.ul`
   gap: 48px;
   align-items: flex-start;
   text-transform: uppercase;
-  background: rgba(11, 13, 23, 0.15);
+  background: transparent;
+  //background: rgba(11, 13, 23, 0.15);
   backdrop-filter: blur(40px);
   overflow-x: clip;
   transform: ${props => (props.$isOpen ? 'translateX(0)' : 'translateX(100%)')};
