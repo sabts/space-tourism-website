@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import {
   StyledButton,
   StyledHomeContainer,
+  StyledLink,
   StyledSubtitle,
   StyledText,
   StyledTextContainer,
@@ -22,9 +23,9 @@ const Home = () => {
         </StyledText>
       </StyledTextContainer>
 
-      <Link to={"/destination"}>
+      <StyledLink to={"/destination"}>
         <StyledButton>EXPLORE</StyledButton>
-      </Link>
+      </StyledLink>
     </StyledHomeContainer>
   );
 };
