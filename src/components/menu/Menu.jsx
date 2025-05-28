@@ -32,26 +32,23 @@ const Menu = () => {
         )}
       </StyledImgContainer>
 
-      {showMenu && (
-        <nav>
-          <StyledMenuContentContainer $isOpen={showMenu}>
-            {MENU_CONTENT.map(content => (
-              <li key={content.id}>
-                <StyledMenuContent
-                  to={content.path}
-                  onClick={() => setShowMenu(false)}
-                >
-                  <StyledMenuElement>
+      <nav>
+        <StyledMenuContentContainer $isOpen={showMenu}>
+          {MENU_CONTENT.map(content => (
+            <li key={content.id}>
+              <StyledMenuContent
+                to={content.path}
+                onClick={() => setShowMenu(false)}
+              >
+                <StyledMenuElement>
                   <StyledIndex>{content.index}</StyledIndex>
                   <span>{content.name}</span>
-                  </StyledMenuElement>
-
-                </StyledMenuContent>
-              </li>
-            ))}
-          </StyledMenuContentContainer>
-        </nav>
-      )}
+                </StyledMenuElement>
+              </StyledMenuContent>
+            </li>
+          ))}
+        </StyledMenuContentContainer>
+      </nav>
     </StyledMenuContainer>
   );
 };

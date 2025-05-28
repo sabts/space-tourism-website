@@ -41,12 +41,14 @@ const StyledMenuContentContainer = styled.ul`
   backdrop-filter: blur(40px);
   overflow-x: clip;
   translate: ${({ $isOpen }) => ($isOpen ? "0" : "100%")};
-  transition: translate 0.5s ease-in;
+  transition: translate 0.3s ease-in;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
     translate: 0;
     top: 0;
+    padding: 0;
+    align-self: stretch;
   }
 `;
 
