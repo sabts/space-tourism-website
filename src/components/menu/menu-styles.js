@@ -60,7 +60,7 @@ const StyledMenuContent = styled(NavLink)`
   position: relative;
   width: 219px;
 
-  &:active::before {
+  &.active::before {
     content: "";
     position: absolute;
     left: 100%;
