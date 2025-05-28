@@ -19,13 +19,14 @@ const Technology = () => {
   const selectedTechnology = TECHNOLOGY_CONTENT[currentTab];
 
   return (
+    <>
+    <StyledStepContainer>
+    <StyledStepNumber>03</StyledStepNumber>
+    <StyledStepText>SPACE LAUNCH 101</StyledStepText>
+  </StyledStepContainer>
     <StyledtechnologyContainer>
       {selectedTechnology && (
         <>
-          <StyledStepContainer>
-            <StyledStepNumber>03</StyledStepNumber>
-            <StyledStepText>SPACE LAUNCH 101</StyledStepText>
-          </StyledStepContainer>
           <picture>
             <source
               srcSet={selectedTechnology.img.desktop}
@@ -52,6 +53,7 @@ const Technology = () => {
         </>
       )}
     </StyledtechnologyContainer>
+    </>
   );
 };
 export default Technology;

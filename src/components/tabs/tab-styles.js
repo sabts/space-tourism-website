@@ -19,6 +19,10 @@ const StyledDestinationTab = styled.li`
     $isActive ? COLORS.secondary : "rgba(255, 255, 255, 0.25)"};
   border-bottom: 2px solid
     ${({ $isActive }) => ($isActive ? COLORS.secondary : "transparent")};
+
+  @media screen and (min-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const StyledCrewTab = styled.div`
@@ -45,6 +49,12 @@ const StyledTechnologyTab = styled.div`
       $isActive ? COLORS.secondary : "rgba(255, 255, 255, 0.25)"};
   color: ${({ $isActive }) => ($isActive ? COLORS.primary : COLORS.secondary)};
   margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+  }
 `;
 export {
   StyledTabContainer,

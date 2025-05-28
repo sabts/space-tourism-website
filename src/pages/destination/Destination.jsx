@@ -3,9 +3,11 @@ import Tabs from "../../components/tabs/Tabs";
 import { DESTINATION_CONTENT } from "../../constants/destination-content";
 import { TABS } from "../../constants/destination-tabs";
 import {
+  StyledBoxInfo,
+  StyledContentContainer,
   StyledDestinationContainer,
   StyledImg,
-  StyledInfoBox,
+  StyledInfoBoxContainer,
   StyledInfoBoxText,
   StyledInfoBoxTitle,
   Styledline,
@@ -34,20 +36,22 @@ const Destination = () => {
             src={selectedDestination.img}
             alt={selectedDestination.name}
           />
+          <StyledContentContainer>
           <Tabs tabs={TABS} activeTab={activeTab} setActiveTab={setActiveTab} />
           <StyledTitle>{selectedDestination.name}</StyledTitle>
           <StyledText>{selectedDestination.text}</StyledText>
           <Styledline></Styledline>
-          <StyledInfoBox>
-            <div>
+          <StyledInfoBoxContainer>
+            <StyledBoxInfo>
               <StyledInfoBoxTitle>AVG. DISTANCE</StyledInfoBoxTitle>
               <StyledInfoBoxText>{selectedDestination.distance}</StyledInfoBoxText>
-            </div>
+            </StyledBoxInfo>
             <div>
               <StyledInfoBoxTitle>EST. TRAVEL TIME</StyledInfoBoxTitle>
               <StyledInfoBoxText>{selectedDestination.travelTime}</StyledInfoBoxText>
             </div>
-          </StyledInfoBox>
+          </StyledInfoBoxContainer>
+          </StyledContentContainer>
         </>
       )}
     </StyledDestinationContainer>
