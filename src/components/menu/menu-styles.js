@@ -18,6 +18,10 @@ const StyledImg = styled.img`
   width: 24px;
   height: 24px;
   z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const StyledMenuContentContainer = styled.ul`
@@ -36,9 +40,14 @@ const StyledMenuContentContainer = styled.ul`
   z-index: 1;
   backdrop-filter: blur(40px);
   overflow-x: clip;
-  transform: ${({ $isOpen }) =>
-    $isOpen ? "translateX(0)" : "translateX(100%)"};
-  transition: transform 1s ease-in;
+  translate: ${({ $isOpen }) => ($isOpen ? "0" : "100%")};
+  transition: translate 0.5s ease-in;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    translate: 0;
+    top: 0;
+  }
 `;
 
 const StyledMenuContent = styled(NavLink)`
