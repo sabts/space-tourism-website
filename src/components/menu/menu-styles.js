@@ -6,6 +6,8 @@ const StyledMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1;
+  position: relative;
+  overflow-x: clip;
 
   @media screen and (min-width: 1024px) {
     padding-top: 40px;
@@ -35,7 +37,7 @@ const StyledMenuContentContainer = styled.ul`
   right: 0;
   display: flex;
   width: 254px;
-  height: 107%;
+  height: 680px;
   padding-top: 7rem;
   padding-left: 32px;
   flex-direction: column;
@@ -44,12 +46,12 @@ const StyledMenuContentContainer = styled.ul`
   text-transform: uppercase;
   z-index: 1;
   backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.05);
   overflow-x: clip;
   translate: ${({ $isOpen }) => ($isOpen ? "0" : "100%")};
   transition: translate 0.3s ease-in;
 
   @media screen and (min-width: 768px) {
-    background: rgba(255, 255, 255, 0.05);
     flex-direction: row;
     translate: 0;
     top: 0;
@@ -64,7 +66,6 @@ const StyledMenuContentContainer = styled.ul`
   }
 
   @media screen and (min-width: 1024px) {
-    background: rgba(255, 255, 255, 0.05);
     min-width: 60%;
     margin-top: 40px;
 
