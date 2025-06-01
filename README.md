@@ -1,4 +1,4 @@
-# Título del proyecto
+# Space Tourism Website
 
 <p>
     <img src="" alt="Imagen del proyecto">
@@ -14,11 +14,15 @@
 
 ## Descripción 📑
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
+En esta práctica construí una página web multipágina sobre turismo espacial. El sitio cuenta con cuatro secciones principales: Home, Destination, Crew y Technology.
+
+Uno de los enfoques clave de este proyecto fue implementar una navegación fluida y estructurada entre páginas, utilizando Layout y Outlet de React Router
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
+En este proyecto profundicé en el uso de React Router, especialmente en la implementación de los componentes Layout y Outlet. Esto facilitó la estructura y renderización del sitio, ya que permitió mantener una base común para todas las páginas sin que el componente Home se volviera a renderizar al navegar entre rutas. Gracias a esto, la navegación fue más fluida y eficiente.
+
+También enfrenté varios desafíos relacionados con estilos dinámicos, como las transiciones entre pestañas, el cambio de imágenes según la tecnología seleccionada y pequeñas animaciones en la navegación. Todo esto me ayudó a mejorar mi comprensión de la lógica condicional en React y a aplicar una mejor separación de responsabilidades entre componentes.
 
 ## Tecnologías 🛠
 
@@ -33,14 +37,12 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, 
 ## Capturas del proyecto
 
 <p>
-   <img src="" alt="Captura del proyecto">
-   <img src="" alt="Captura del proyecto">
-   <img src="" alt="Captura del proyecto">
+   <img src="" alt="gif del modo mobile">
 </p>
 
 ## Autor ✒️
 
-**TU NOMBRE**
+**Sabrina Taraschi**
 
 <ul>
     <li>
