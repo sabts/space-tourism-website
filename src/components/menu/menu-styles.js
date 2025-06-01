@@ -62,12 +62,12 @@ const StyledMenuContentContainer = styled.ul`
     align-self: stretch;
     justify-content: flex-end;
     align-items: center;
-    overflow-x: clip;
   }
 
   @media screen and (min-width: 1024px) {
     min-width: 60%;
     margin-top: 40px;
+    overflow-x: visible;
 
     &::before {
       content: "";

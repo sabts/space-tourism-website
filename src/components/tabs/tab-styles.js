@@ -9,6 +9,18 @@ const StyledTabContainer = styled.ul`
   gap: 24px;
 `;
 
+const StyledTabContainerTechnology = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  padding: 0;
+  gap: 24px;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: column;
+  }
+`;
+
 const StyledDestinationTab = styled.li`
   list-style: none;
   font-size: 0.875rem;
@@ -58,6 +70,7 @@ const StyledTechnologyTab = styled.div`
 `;
 export {
   StyledTabContainer,
+  StyledTabContainerTechnology,
   StyledDestinationTab,
   StyledCrewTab,
   StyledTechnologyTab,

@@ -1,8 +1,8 @@
-import { StyledTabContainer, StyledTechnologyTab } from "./tab-styles";
+import { StyledTabContainer, StyledTabContainerTechnology, StyledTechnologyTab } from "./tab-styles";
 
 const TabsTechnology = ({ tabs, activeTab, setActiveTab }) => {
   return (
-    <StyledTabContainer>
+    <StyledTabContainerTechnology>
       {tabs.map((tab, index) => (
         <StyledTechnologyTab
           key={tab}
@@ -12,7 +12,7 @@ const TabsTechnology = ({ tabs, activeTab, setActiveTab }) => {
           {index + 1}
         </StyledTechnologyTab>
       ))}
-    </StyledTabContainer>
+    </StyledTabContainerTechnology>
   );
 };
 export default TabsTechnology;

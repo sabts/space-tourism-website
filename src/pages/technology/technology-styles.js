@@ -21,8 +21,7 @@ const StyledtechnologyContainer = styled.section`
     padding-inline: 120px;
     text-align: left;
     align-self: center;
-    grid-row: 2;
-    grid-column: 2;
+    grid-template-columns: repeat(3, auto);
   }
 `;
 
@@ -77,11 +76,24 @@ const StyledStepText = styled.span`
   }
 `;
 
+const StyledTabWrapper = styled.div`
+  @media screen and (min-width: 1024px) {
+    grid-column: 1;
+  }
+`;
+
 const StyledContentContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 16px;
+
+  @media screen and (min-width: 1024px) {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: start;
+    width: 491px;
+  }
 `;
 
 const StyledTitle = styled.h2`
@@ -93,6 +105,9 @@ const StyledTitle = styled.h2`
 
   @media screen and (min-width: 768px) {
     font-size: 2.5rem;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 1.75rem;
   }
 `;
 
@@ -119,6 +134,21 @@ const StyledText = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 1rem;
   }
+  @media screen and (min-width: 1024px) {
+    text-align: start;
+  }
+`;
+
+const StyledPicture = styled.picture`
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 1024px) {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    position: relative;
+    left: 200px;
+  }
 `;
 
 const StyledImg = styled.img`
@@ -129,6 +159,10 @@ const StyledImg = styled.img`
   @media screen and (min-width: 768px) {
     min-width: 770px;
   }
+  @media screen and (min-width: 1024px) {
+    min-width: 603px;
+    min-height: 729px;
+  }
 `;
 
 export {
@@ -136,9 +170,11 @@ export {
   StyledStepContainer,
   StyledStepNumber,
   StyledStepText,
+  StyledTabWrapper,
   StyledContentContainer,
   StyledTitle,
   StyledSubtitle,
   StyledText,
+  StyledPicture,
   StyledImg,
 };

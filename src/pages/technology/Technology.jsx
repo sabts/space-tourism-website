@@ -3,11 +3,14 @@ import { TECHNOLOGY_CONTENT } from "../../constants/technology-content";
 import { TABS } from "../../constants/technology-tab";
 import TabsTechnology from "../../components/tabs/Tabs-technology";
 import {
+  StyledContentContainer,
   StyledImg,
+  StyledPicture,
   StyledStepContainer,
   StyledStepNumber,
   StyledStepText,
   StyledSubtitle,
+  StyledTabWrapper,
   StyledtechnologyContainer,
   StyledText,
   StyledTitle,
@@ -27,7 +30,7 @@ const Technology = () => {
     <StyledtechnologyContainer>
       {selectedTechnology && (
         <>
-          <picture>
+          <StyledPicture>
             <source
               srcSet={selectedTechnology.img.desktop}
               media="(min-width: 1024px)"
@@ -41,15 +44,19 @@ const Technology = () => {
               media="(min-width: 375px)"
             />
             <StyledImg src={selectedTechnology.img.mobileAndTablet} />
-          </picture>
+          </StyledPicture>
+          <StyledTabWrapper>
           <TabsTechnology
             tabs={TABS}
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
+          </StyledTabWrapper>
+             < StyledContentContainer>
           <StyledSubtitle>THE TERMINOLOGY…</StyledSubtitle>
           <StyledTitle>{selectedTechnology.terminology}</StyledTitle>
           <StyledText>{selectedTechnology.text}</StyledText>
+          </StyledContentContainer>
         </>
       )}
     </StyledtechnologyContainer>
