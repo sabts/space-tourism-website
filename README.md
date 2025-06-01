@@ -38,7 +38,6 @@ También enfrenté varios desafíos relacionados con estilos dinámicos, como la
 
 <p>
    <img src="https://raw.githubusercontent.com/sabts/space-tourism-website/refs/heads/main/design/tablet-destination-page.png" alt="destination page">
-   <img src="https://raw.githubusercontent.com/sabts/space-tourism-website/refs/heads/main/design/mobileMode.gif" alt="gif del modo mobile">
 </p>
 
 ## Autor ✒️
