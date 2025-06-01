@@ -1,7 +1,7 @@
 # Space Tourism Website
 
 <p>
-    <img src="" alt="Imagen del proyecto">
+    <img src="https://raw.githubusercontent.com/sabts/space-tourism-website/refs/heads/main/design/Desktop%20-%20Home.png" alt="Imagen del proyecto">
 </p>
 
 ## Vista en vivo
@@ -37,7 +37,8 @@ También enfrenté varios desafíos relacionados con estilos dinámicos, como la
 ## Capturas del proyecto
 
 <p>
-   <img src="" alt="gif del modo mobile">
+   <img src="" alt="destination page">
+   <img src="https://raw.githubusercontent.com/sabts/space-tourism-website/refs/heads/main/design/mobileMode.gif" alt="gif del modo mobile">
 </p>
 
 ## Autor ✒️
